@@ -1,0 +1,13 @@
+.home {
+  position: relative;
+  isolation: isolate; /* Creates a new stacking context */
+}
+
+.decore {
+  position: absolute;
+  top: -100px;
+  right: 0;
+  overflow: hidden;
+  z-index: -1;
+  width: 60%;
+}

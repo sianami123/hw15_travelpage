@@ -1,0 +1,30 @@
+.hero-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.plane1 {
+  position: absolute;
+  top: 40px;
+  left: 100px;
+  width: 137px;
+}
+
+.plane2 {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 137px;
+}
+
+.hero-image-container:hover .plane1 {
+  transform: translateZ(100px);
+}
