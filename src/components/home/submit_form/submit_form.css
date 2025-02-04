@@ -52,13 +52,14 @@ h2 {
 }
 
 .submit-button {
-  width: 100%;
   margin-top: 1rem;
   padding: 1rem 2rem;
   background: blue;
   color: #ffffff;
   border-radius: 8px;
   font-size: 1.1rem;
+  display: block;
+  margin: 0 auto;
 }
 
 .submit-button:hover {

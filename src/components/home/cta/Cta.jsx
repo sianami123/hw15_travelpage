@@ -2,8 +2,10 @@ import { FaPlay } from "react-icons/fa";
 import Visuals from "../visuals/Visuals";
 import "./Cta.css";
 
-export default function Cta() {
-  function handleFindMore() {}
+export default function Cta({ setShowModal, showModal }) {
+  function handleFindMore() {
+    setShowModal(!showModal);
+  }
 
   return (
     <div className="cta">

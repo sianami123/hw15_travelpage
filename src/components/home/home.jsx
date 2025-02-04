@@ -5,21 +5,22 @@ import SocialProof2 from "./social_proof2/SocialProof2";
 import SubmitForm from "./submit_form/submit_form";
 import Modal from "./modal/modal";
 import "./Home.css";
-
+import { useState } from "react";
 import decore from "./assets/decore.png";
 
 export default function Home() {
+  const [showModal, setShowModal] = useState(false);
   return (
     <div className="home">
       <img src={decore} alt="decore" className="decore" />
       <Header />
-      <Cta />
+      <Cta setShowModal={setShowModal} showModal={showModal} />
       <SocialProof1 />
       <SocialProof2 />
       <SubmitForm />
-      {/* <Modal>
+      <Modal showModal={showModal} setShowModal={setShowModal}>
         <SubmitForm />
-      </Modal> */}
+      </Modal>
     </div>
   );
 }

@@ -5,7 +5,7 @@
   width: 100%;
   height: 100%;
   inset: 0;
-  /* visibility: hidden; */
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-content {
@@ -13,4 +13,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.showModal {
+  visibility: visible;
+}
+
+.hideModal {
+  visibility: hidden;
 }
