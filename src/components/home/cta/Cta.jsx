@@ -3,6 +3,8 @@ import Visuals from "../visuals/Visuals";
 import "./Cta.css";
 
 export default function Cta() {
+  function handleFindMore() {}
+
   return (
     <div className="cta">
       <div className="cta-content">
@@ -20,7 +22,9 @@ export default function Cta() {
           the.
         </p>
         <div className="cta-buttons">
-          <button className="find-more-btn">Find out more</button>
+          <button className="find-more-btn" onClick={handleFindMore}>
+            Find out more
+          </button>
           <button className="play-demo-btn">
             <span className="play-icon">
               <FaPlay size={12} />
