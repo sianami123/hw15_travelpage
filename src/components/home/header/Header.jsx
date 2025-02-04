@@ -1,8 +1,8 @@
 import "./Header.css";
 
-export default function Header() {
+export default function Header({ isDarkMode, setIsDarkMode }) {
   return (
-    <header className="header">
+    <header className={`header ${isDarkMode ? "dark-mode" : "light-mode"}`}>
       <nav className="navbar">
         <div className="logo">Jadoo</div>
         <div className="nav-links">
@@ -16,6 +16,12 @@ export default function Header() {
             <option value="en">EN</option>
             <option value="fa">FA</option>
           </select>
+          <button
+            className="dark-mode-btn"
+            onClick={() => setIsDarkMode(!isDarkMode)}
+          >
+            {isDarkMode ? "Light" : "Dark"}
+          </button>
         </div>
       </nav>
     </header>

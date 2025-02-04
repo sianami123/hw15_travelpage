@@ -10,10 +10,11 @@ import decore from "./assets/decore.png";
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   return (
     <div className="home">
       <img src={decore} alt="decore" className="decore" />
-      <Header />
+      <Header isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <Cta setShowModal={setShowModal} showModal={showModal} />
       <SocialProof1 />
       <SocialProof2 />

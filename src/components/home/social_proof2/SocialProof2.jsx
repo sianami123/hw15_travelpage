@@ -51,7 +51,12 @@ export default function SocialProof2() {
         loop={true}
         autoplay={{
           delay: 2500,
-          disableOnInteraction: true,
+          disableOnInteraction: false,
+        }}
+        onSwiper={(swiper) => {
+          setTimeout(() => {
+            swiper.slideTo(1);
+          }, 2500);
         }}
         pagination={{
           clickable: true,

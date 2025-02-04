@@ -4,6 +4,14 @@
   overflow: hidden;
 }
 
+.dark-mode {
+  background-color: #181e4b;
+  color: #fff;
+}
+
+.light-mode {
+  background-color: #fff;
+}
 .navbar {
   display: flex;
   justify-content: space-between;
