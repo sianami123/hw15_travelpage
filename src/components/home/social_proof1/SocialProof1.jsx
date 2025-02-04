@@ -26,7 +26,7 @@ export default function SocialProof1() {
               <LogoSlideItem image={global} name="Global" />
               <LogoSlideItem image={lightbox} name="Lightbox" />
               <LogoSlideItem image={nietz} name="Nietz" />
-              {/* duplicate the last item to create a smooth transition */}
+              {/* //////////////////// */}
               <LogoSlideItem image={bolt} name="Bolt" />
               <LogoSlideItem image={featherdev} name="Featherdev" />
               <LogoSlideItem image={global} name="Global" />
