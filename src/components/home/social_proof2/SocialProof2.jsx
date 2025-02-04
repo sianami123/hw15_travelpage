@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import Testimonial from "./testimonial";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -15,10 +15,11 @@ const testimonials = [
   {
     id: 1,
     quote:
-      "This platform has transformed how we handle our workflow. The efficiency gains are remarkable.",
+      "This platform has transformed how we handle our efficiency gains are remarkable.",
     author: "Sarah Johnson",
     role: "Product Manager",
     company: "TechCorp",
+    image: "https://avatar.iran.liara.run/public/18",
   },
   {
     id: 2,
@@ -27,7 +28,9 @@ const testimonials = [
     author: "Michael Chen",
     role: "CTO",
     company: "Innovate",
+    image: "https://avatar.iran.liara.run/public/1",
   },
+
   {
     id: 3,
     quote:
@@ -35,6 +38,7 @@ const testimonials = [
     author: "Emma Davis",
     role: "Operations Director",
     company: "DataFlow",
+    image: "https://avatar.iran.liara.run/public/45",
   },
 ];
 
@@ -45,28 +49,29 @@ export default function SocialProof2() {
         slidesPerView={1}
         spaceBetween={30}
         loop={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: true,
+        }}
         pagination={{
           clickable: true,
+          el: ".swiper-pagination",
         }}
-        navigation={true}
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }}
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
         {testimonials.map((testimonial) => (
           <SwiperSlide key={testimonial.id}>
-            <div className="testimonial-card">
-              <blockquote className="testimonial-quote">
-                "{testimonial.quote}"
-              </blockquote>
-              <div className="testimonial-author">
-                <p className="author-name">{testimonial.author}</p>
-                <p className="author-role">
-                  {testimonial.role} at {testimonial.company}
-                </p>
-              </div>
-            </div>{" "}
+            <Testimonial testimonial={testimonial} />
           </SwiperSlide>
         ))}
+        <div className="swiper-button-prev"></div>
+        <div className="swiper-button-next"></div>
+        <div className="swiper-pagination"></div>
       </Swiper>
     </>
   );
